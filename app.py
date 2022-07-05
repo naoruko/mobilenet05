@@ -63,7 +63,7 @@ else:
         st.write("画面をリロードしてください。")
     
 
-uploaded_file = st.file_uploader('判定する写真をアップロードが撮影してください。', type=['jpg','png','jpeg'])
+uploaded_file = st.file_uploader('判定する写真をアップロードか撮影してください。', type=['jpg','png','jpeg'])
 if uploaded_file is not None:
 
     img = Image.open(uploaded_file)
