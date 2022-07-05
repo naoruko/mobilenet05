@@ -1,3 +1,3 @@
 # mobilenet05
-参考にしました。
+勉強させていただきました。
 https://github.com/saotomryo/Image_Identification
