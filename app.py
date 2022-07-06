@@ -42,7 +42,7 @@ class Mobilenetv2(nn.Module):
 st.title('画像判定アプリ')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
-upload_model = st.file_uploader('学習したAIモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
+upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
 
 json_load = None
 
