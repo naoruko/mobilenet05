@@ -43,9 +43,9 @@ st.title('画像判定アプリ')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
 #upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
-upload_model = model92.pth
+#upload_model = model92.pth
 
-net = torch.load(upload_model)
+net = torch.load(model92.pth)
 features = net.categories
 
 
