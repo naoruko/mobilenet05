@@ -66,7 +66,8 @@ if uploaded_file is not None:
         out = net(data)
         predict = out.argmax(dim=1)
         st.write(out)
-
+        st.write(predict)
+        
     st.markdown('認識結果')
 # 予測kokokara
 #    results = predict(data)
