@@ -86,11 +86,11 @@ if uploaded_file is not None:
     st.markdown('認識結果')
 
 #    if upload_model is not None:
-    st.write(features[predict.detach().numpy()[0]])
+st.write(features[predict.detach().numpy()[0]])
 '''
     else:
         if json_load is not None:
             i = predict.detach().numpy()[0]
             st.write(json_load[str(i)])
 '''
-    st.image(img)
+st.image(img)
