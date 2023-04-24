@@ -66,7 +66,7 @@ if uploaded_file is not None:
         out = net(data)
         st.write(out)
         m = nn.Softmax(dim=1)
-        print(m(out))
+        st.write(m(out))
         predict = out.argmax(dim=1)
         st.write(out)
         st.write(predict)
