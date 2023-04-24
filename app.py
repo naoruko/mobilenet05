@@ -68,6 +68,15 @@ if uploaded_file is not None:
         #st.write(out)
 
     st.markdown('認識結果')
+# 予測kokokara
+    results = predict(data)
+
+# 結果の表示
+    st.subheader("判定結果")
+    n_top = 3  # 確率が高い順に3位まで返す
+    for result in results[:n_top]:
+        st.write(str(round(result[2]*100, 2)) + "%の確率で" + result[0] + "です。")
+# 予測kokomade kesu
 
 #    if upload_model is not None:
     st.write(features[predict.detach().numpy()[0]])
