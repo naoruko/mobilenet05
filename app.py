@@ -51,8 +51,8 @@ features = net.categories
 json_load = None
 
 ''' 
-#コメントアウト
-#if upload_model is not None:
+# コメントアウト
+# if upload_model is not None:
 #    #net.load_state_dict(torch.load(upload_model,map_location=torch.device('cpu')))
 #    try:
 #        net = torch.load(upload_model)
@@ -94,4 +94,4 @@ if uploaded_file is not None:
             i = predict.detach().numpy()[0]
             st.write(json_load[str(i)])
 '''
-st.image(img)
+        st.image(img)
