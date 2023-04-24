@@ -42,10 +42,13 @@ class Mobilenetv2(nn.Module):
 st.title('画像判定アプリ')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
-upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
+#upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
+upload_model = st.model92.pth
+
 
 json_load = None
 
+''' コメントアウト
 if upload_model is not None:
     #net.load_state_dict(torch.load(upload_model,map_location=torch.device('cpu')))
     try:
@@ -61,7 +64,7 @@ else:
         json_load = json.load(json_open)
     except:
         st.write("画面をリロードしてください。")
-    
+'''    
 
 uploaded_file = st.file_uploader('判定する写真をアップロードか撮影してください。', type=['jpg','png','jpeg'])
 if uploaded_file is not None:
