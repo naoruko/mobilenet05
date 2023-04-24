@@ -51,22 +51,23 @@ features = net.categories
 json_load = None
 
 ''' 
-コメントアウト
-if upload_model is not None:
-    #net.load_state_dict(torch.load(upload_model,map_location=torch.device('cpu')))
-    try:
-        net = torch.load(upload_model)
-        features = net.categories
-    except:
-        st.write("画面をリロードしてください。")
-        upload_model = None
-else:
-    try:
-        net = mobilenetv2.mobilenet_v2(pretrained=True)
-        json_open = open('imagenet1000_clsidx_to_labels.json', 'r')
-        json_load = json.load(json_open)
-    except:
-        st.write("画面をリロードしてください。")
+#コメントアウト
+#if upload_model is not None:
+#    #net.load_state_dict(torch.load(upload_model,map_location=torch.device('cpu')))
+#    try:
+#        net = torch.load(upload_model)
+#        features = net.categories
+#    except:
+#        st.write("画面をリロードしてください。")
+#        upload_model = None
+#else:
+#    try:
+#        net = mobilenetv2.mobilenet_v2(pretrained=True)
+#        json_open = open('imagenet1000_clsidx_to_labels.json', 'r')
+#        json_load = json.load(json_open)
+#    except:
+#        st.write("画面をリロードしてください。")
+#
 '''    
 
 uploaded_file = st.file_uploader('判定する写真をアップロードか撮影してください。', type=['jpg','png','jpeg'])
@@ -86,7 +87,7 @@ if uploaded_file is not None:
     st.markdown('認識結果')
 
 #    if upload_model is not None:
-st.write(features[predict.detach().numpy()[0]])
+    st.write(features[predict.detach().numpy()[0]])
 '''
     else:
         if json_load is not None:
