@@ -88,10 +88,11 @@ if uploaded_file is not None:
 
 #    if upload_model is not None:
     st.write(features[predict.detach().numpy()[0]])
+    st.image(img)
 '''
     else:
         if json_load is not None:
             i = predict.detach().numpy()[0]
             st.write(json_load[str(i)])
 '''
-        st.image(img)
+        
