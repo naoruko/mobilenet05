@@ -92,4 +92,4 @@ if uploaded_file is not None:
             i = predict.detach().numpy()[0]
             st.write(json_load[str(i)])
 '''
-    st.image(img)
+st.image(img)
