@@ -66,10 +66,10 @@ if uploaded_file is not None:
         out = net(data)
         st.write(out)
         
-        st.write(out, dtype=torch.float64)
+        st.write(out, dtype=torch.float32)
         softmax = torch.nn.Softmax(dim=1)
         st.write(softmax(out))
-        st.write(softmax(out), dtype=torch.float64)
+        st.write(softmax(out), dtype=torch.float32)
         predict = out.argmax(dim=1)
         st.write(out)
         st.write(predict)
