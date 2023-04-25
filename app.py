@@ -75,10 +75,8 @@ if uploaded_file is not None:
 # 予測kokokara
     y_prob = torch.nn.functional.softmax(torch.squeeze(out)) 
     st.write(y_prob)
-    results = predict(img)
-    n_top = 3  # 確率が高い順に3位まで返す
-    for result in results[:n_top]:
-        st.write(str(round(result[2]*100, 2)) + "%の確率で" + result[0] + "です。")
+#    results = predict(img)
+
 #    st.write(results)
     
 # 結果の表示
