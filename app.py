@@ -65,7 +65,7 @@ if uploaded_file is not None:
     with torch.no_grad():
         out = net(data)
         st.write(out)
-        softmax = torch.nn.Softmax(dim=1)
+        softmax = torch.nn.Softmax(dim=0)
         st.write(softmax(out))
         predict = out.argmax(dim=1)
         st.write(out)
