@@ -74,11 +74,9 @@ if uploaded_file is not None:
                       
     st.markdown('認識結果')
 
-    def softmax1(x):
-        exp_x = np.exp(x)
-        return exp_x / np.sum(exp_x)
-        st.write(softmax1(out))
-
+    n_top = 3  # 確率が高い順に3位まで返す
+    for result in results[:n_top]:
+        st.write(str(round(result[2]*100, 2)) + "%の確率で" + result[0] + "です。")
 # 予測kokokara
 #    y_prob = torch.nn.functional.softmax(torch.squeeze(out)) 
 #    y_prob = softmax(torch(out)) 
