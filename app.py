@@ -73,7 +73,7 @@ if uploaded_file is not None:
                 
     st.markdown('認識結果')
 # 予測kokokara
-    y_prob = torch.nn.functional.softmax(torch.squeeze(out)) 
+    y_prob = torch.nn.functional.softmax(torch(out)) 
     st.write(y_prob)
     #    results = predict(data)
 #    st.write(results)
