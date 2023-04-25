@@ -39,7 +39,8 @@ class Mobilenetv2(nn.Module):
         states = self.fc(states)
         return states
 
-st.title('クロマツ雌花ステージ判定       webアプリ')
+st.title('クロマツ雌花ステージ判定')
+st.title('webアプリ')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
 #upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
