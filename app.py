@@ -71,12 +71,14 @@ if uploaded_file is not None:
         st.write(out)
         st.write(predict)
         
+                      
+    st.markdown('認識結果')
+
     def softmax1(x):
         exp_x = np.exp(x)
-        return exp_x / np.sum(exp_x)    
-                       
-    st.markdown('認識結果')
+        return exp_x / np.sum(exp_x)
     st.write(softmax1(out))
+
 # 予測kokokara
 #    y_prob = torch.nn.functional.softmax(torch.squeeze(out)) 
 #    y_prob = softmax(torch(out)) 
