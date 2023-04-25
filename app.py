@@ -72,6 +72,8 @@ if uploaded_file is not None:
         predict = out.argmax(dim=1)
         st.write(out)
         st.write(predict)
+        st.write(softmax(out))
+
         
                       
     st.markdown('認識結果')
