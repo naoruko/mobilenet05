@@ -70,7 +70,12 @@ if uploaded_file is not None:
         predict = out.argmax(dim=1)
         st.write(out)
         st.write(predict)
-        st.write(softmax(out))
+        
+    def softmax1(x):
+        exp_x = np.exp(x)
+        return exp_x / np.sum(exp_x)    
+        
+        st.write(softmax1(out))
                 
     st.markdown('認識結果')
 # 予測kokokara
