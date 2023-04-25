@@ -93,7 +93,6 @@ if uploaded_file is not None:
 
 #    if upload_model is not None:
     st.write(features[predict.detach().numpy()[0]])
-    st.write(features[predict.detach().numpy()[1]])
-    st.write(features[predict.detach().numpy()[2]])
+    st.write(features[predict.detach().numpy()])
     st.image(img)
 
