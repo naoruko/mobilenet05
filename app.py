@@ -70,13 +70,14 @@ if uploaded_file is not None:
         predict = out.argmax(dim=1)
         st.write(out)
         st.write(predict)
+        st.write(softmax(np.array(out)))
                 
     st.markdown('認識結果')
 # 予測kokokara
 #    y_prob = torch.nn.functional.softmax(torch.squeeze(out)) 
-    y_prob = softmax(torch(out)) 
+#    y_prob = softmax(torch(out)) 
 
-    st.write(y_prob)
+#    st.write(y_prob)
 #    results = predict(img)
 
 #    st.write(results)
