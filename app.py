@@ -75,7 +75,7 @@ if uploaded_file is not None:
         exp_x = np.exp(x)
         return exp_x / np.sum(exp_x)    
         
-    st.write(softmax1(out))
+st.write(softmax1(out))
                 
     st.markdown('認識結果')
 # 予測kokokara
