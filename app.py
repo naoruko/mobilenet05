@@ -41,6 +41,7 @@ class Mobilenetv2(nn.Module):
 
 st.title('クロマツ雌花ステージ判定')
 st.title('webアプリ')
+st.title('')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
 #upload_model = st.file_uploader('学習したモデルをアップロードしてください(アップロードしない場合は、事前学習された内容で判定します。)',type=['pth'])
@@ -54,7 +55,7 @@ json_load = None
 
     
 
-uploaded_file = st.file_uploader('判定する写真をアップロード、または撮影してください。', type=['jpg','png','jpeg'])
+uploaded_file = st.file_uploader('判定する写真をアップロードまたは撮影してください。', type=['jpg','png','jpeg'])
 if uploaded_file is not None:
 
     img = Image.open(uploaded_file)
