@@ -40,7 +40,7 @@ class Mobilenetv2(nn.Module):
         return states
 
 st.title('クロマツ雌花ステージ判定')
-st.title('webアプリ')
+#st.title('webアプリ')
 st.title('')
 
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
